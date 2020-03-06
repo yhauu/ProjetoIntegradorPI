@@ -1,5 +1,4 @@
 package br.com.aulas;
-import java.util.Scanner;
 
 public class HelloWorld {
     public static void main(String[] args) {
@@ -7,8 +6,8 @@ public class HelloWorld {
         System.out.println("Hello World");
  
         //Primeiro input do sistema
-        Scanner input = new Scanner(System.in);
+        //Scanner input = new Scanner(System.in);
         //Conversão de valor String para Int
-        int idade = input.nextInt();
+        //int idade = input.nextInt();
     }
 }
