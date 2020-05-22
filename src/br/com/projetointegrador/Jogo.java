@@ -24,8 +24,8 @@ public class Jogo {
         //1º possível Game Over
         //Para que o jogador avance na historia, terá que passar no desafio 2
         if(!key[1]) {
-            System.out.println("Ao tentar curar seu irmão acabou não piorando seu braço a ponto de amputá-lo.\n"
-                               + "Com seu irmão sem um braço e seu estado de choque por ter feito isso, \n"
+            System.out.println("Ao tentar curar seu irmão, acabou piorando seu braço a ponto de amputá-lo.\n"
+                               + "Com seu irmão sem um braço e,o seu estado de choque por ter feito isso, \n"
                                + "vocês não notaram a segunda horda de demônios e foram massacrados pelo inimigo.");
 
             System.out.println(ClassesUtil.red+"GAME OVER"+ClassesUtil.fim);
@@ -53,7 +53,7 @@ public class Jogo {
 
                 //Verificação caso o jogador tenha acertado o desafio 5 ou não
                 if (key[4]) {
-                    System.out.println("AVENTUREIRO "+nome+""+ClassesUtil.green+" PARABÉNS POR CONCLUIR O JOGO"+ClassesUtil.fim+"!!!...");
+                    System.out.println("AVENTUREIRO "+nome+""+ClassesUtil.green+" PARABÉNS POR CONCLUIR O JOGO "+ClassesUtil.fim+" !!!...");
                     ClassesUtil.Proximo();
                 } else {
                     System.out.println(ClassesUtil.red+"GAME OVER"+ClassesUtil.fim);
@@ -72,7 +72,7 @@ public class Jogo {
         do {
             System.out.print("Insira seu nome nobre aventureiro: ");
             nome = input.next();
-
+            
             confirmar = ClassesUtil.ConfirmarEscolha(2);
         } while(!confirmar.equals("S"));
 
@@ -82,7 +82,7 @@ public class Jogo {
         System.out.println("Os irmãos, "+nome+" e Fernando, estavam em casa numa sexta a noite, \n"
                            + "fazendo o que mais gostavam de fazer que era jogar video-game.\n"
                            + "Após Fernando receber uma mensagem no celular, com o link de algum site, \n"
-                           + "um tanto quanto estraho e na mensagem o amigo que lhe enviou a mensagem disse junto:... ");
+                           + "um tanto estraho e na mensagem o amigo que lhe enviou a mensagem disse junto:... ");
 
         ClassesUtil.Proximo();
 
@@ -98,9 +98,9 @@ public class Jogo {
         ClassesUtil.Proximo();
 
         System.out.println(ClassesUtil.red+"---------------------------------------------------------------"+ClassesUtil.fim);
-        System.out.println("Quando seu irmão menciona sobre o tal PDF um frio corre pela sua espinha \n"
+        System.out.println("Quando seu irmão menciona sobre o tal PDF , um frio corre pela sua espinha \n"
                          + "pois não se tratava de mais uma estória ou mito sobre algum fato sobrenatural normal e popular\n"
-                         + "e sim de um fato pouco discutido e que muitas pessoas nem mesmo conhecia sobre.\n"
+                         + "e sim de um fato pouco discutido e que muitas pessoas nem mesmo o conheciam.\n"
                          + "Era sobre o demônio Beleth, que na lenda, teria ajudado um dos filhos de Noé a \n"
                          + "escrever um dos primeiros livros de mátematica...");
 
@@ -170,7 +170,7 @@ public class Jogo {
             System.out.println("- O que aconteceu ? \n"
                                + "Vocês estão no meu mundo agora, e para voltar \n"
                                + "Terão que passar por todos os meus desafios de matemática usando \n"
-                               + "da magia de gelo ou de fogo que vos darei agora.");
+                               + "a magia de gelo ou de fogo que vos darei agora.");
 
             System.out.println("_______________________________________________________________");
             System.out.println(ClassesUtil.purple+"Classes"+ClassesUtil.fim);
@@ -181,6 +181,7 @@ public class Jogo {
 
             // Laço para o jogador escolher uma classes válida
             do {
+                input.nextLine();
                 System.out.print("Escolha uma classe: ");
                 opcaoUsuario = input.nextLine();
 
@@ -378,10 +379,10 @@ public class Jogo {
         //Mensagem para caso o usuário tenha errado ou acertado a questão.
         if (resposta) {
             ClassesUtil.Feedback1(var1, var2);
-            System.out.println(ClassesUtil.green+"- Bem na mira! Você atingiu os demônios arqueiros de forma que nenhum fico vivo! "+ClassesUtil.fim);
+            System.out.println(ClassesUtil.green+"- Bem na mira! Você atingiu os demônios arqueiros de forma que nenhum ficaste vivo! "+ClassesUtil.fim);
         } else {
             ClassesUtil.Feedback1(var1, var2);
-            System.out.println(ClassesUtil.red+"- Aaaa não você não conseguiu calcular direito a distância e errou a magia!"+ClassesUtil.fim);
+            System.out.println(ClassesUtil.red+"- Aaaa não ! Você não conseguiu calcular direito a distância e errou a magia!"+ClassesUtil.fim);
         }
 
         System.out.println("");
@@ -713,7 +714,7 @@ public class Jogo {
                            + "avistamos uma pequena quantidade de demônios guerreiros que ainda estavam vivos e vindo em nossa direção. \n"
                            + "Você se prepara para usar a sua "+magiaClasse+" mas percebe que o custo de mana que antes era decimal, agora"
                            + "está em binário. Sabendo que para poder conjurar a magia antes o custo era de "+ClassesUtil.purple+""+valor+"\n"
-                           + " pontos de mana, converta-o para binário. \n");
+                           + " pontos de mana, converta-o para binário. \n" + ClassesUtil.fim);
 
         System.out.println("(A) "+ClassesUtil.purple+" 10010"+ClassesUtil.fim+"."); // case 3
         System.out.println("(B) "+ClassesUtil.purple+" 100000"+ClassesUtil.fim+"."); // case 4
@@ -746,10 +747,10 @@ public class Jogo {
         }
 
         if (resposta) {
-            ClassesUtil.Feedback4(valor);
+            ClassesUtil.Feedback4((int)valor);
             System.out.println(ClassesUtil.green+"- Parabéns irmão, você e seu irmão se cumprimentam pois agora só falta uma batalha..."+ClassesUtil.fim);
         } else {
-            ClassesUtil.Feedback4(valor);
+            ClassesUtil.Feedback4((int)valor);
             System.out.println(ClassesUtil.red+"- Infelizmente você não conseguiu fazer a convesão a tempo e os demônios conseguiram ferí-los"
                                               + "mas, seu irmão conjurou uma magia e eliminou os inimigos..."+ClassesUtil.fim);
         }

@@ -92,8 +92,7 @@ public class Main {
             case "S":// Sair //
                 System.out.println("\n Até logo aventureiro.\n");
             break;
-//            default: //Opção inválida
-//                System.err.println("Oxe!!!");
+
         }
     }
 
@@ -108,12 +107,12 @@ public class Main {
         System.out.println("");
         System.out.println("--------------------------------------------------------");
         System.out.println("1º Ensinamento: Nossos pergaminhos consideram somente a primeira letra das\n"
-                         + "da mágias ou ações, então  caso você  digite DOZE iremos\n"
+                         + "mágias ou ações, então  caso você  digite DOZE iremos\n"
                          + "considerar somente o D.");
         System.out.println("--------------------------------------------------------");
         System.out.println("");
 
-        System.out.println("2º Ensinamento: Fique ciente que sempre que aparecer esses redicências ( ... ) ao fim do texto\n"
+        System.out.println("2º Ensinamento: Fique ciente que sempre que aparecer essas redicências ( ... ) ao fim do texto\n"
                          + "significa que esperamos uma resposta no pergaminho, então, aperte ENTER para continuar\n"
                          + "a história...");
 
@@ -149,7 +148,7 @@ public class Main {
         ClassesUtil.Proximo();
 
         System.out.println("");
-        System.out.println("Agora, meu caro aventureiro, o senhor esta pronto para \n"
+        System.out.println("Agora, meu caro aventureiro, o senhor está pronto para \n"
                          + "as batalhas que virão,\n"
                          + "vamos acabar com esse terrível demônio matemático! \n"
                          + "---- PRESSIONE ENTER PARA VOLTAR AO MENU ----");

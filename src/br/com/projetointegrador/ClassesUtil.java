@@ -124,6 +124,7 @@ public class ClassesUtil {
                 System.out.print("Tem certeza ? (s/n): ");
                 opcaoUsuario = input.nextLine();
             } else {
+                input.nextLine();
                 System.out.print("Tem certeza que esse é seu nome, nobre aventureiro ? (s/n): ");
                 opcaoUsuario = input.nextLine();
             }
@@ -199,7 +200,7 @@ public class ClassesUtil {
     }
 
 
-    public static void Feedback4(double valor){
+    public static void Feedback4(int valor){
         String numBinario = "";
         while(valor > 0){
             if(valor%2==0){
